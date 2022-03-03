@@ -1,7 +1,14 @@
 <?php
-    if (isset($_POST["submitButton"])) {
-        echo "Form  was submitted" ;
-    }
+
+require_once("includes\classes\FromSanitizer.php");
+  if (isset($_POST["submitButton"])) {
+    $firstName = FromSanitizer::sanitizeFormString($_POST["firstName"]) ;
+    $lastName  = FromSanitizer::sanitizeFormString($_POST["lastName"]) ;
+    $userName  = FromSanitizer:: sanitizeFormUserName($_POST["userName"]);
+    $email     = FromSanitizer::sanitizeFormEmail($_POST["emailId"]);
+    $password  = FromSanitizer::sanitizeFormPassword($_POST["password"]);
+    $password1 = FromSanitizer::sanitizeFormPassword($_POST["password1"]);
+ }
 ?>
 
 
@@ -23,8 +30,8 @@
 </div>
 
             <form  method = "POST" class ="columnForm" >
-                <input type="text" name = "firs tName" placeholder = "First Name" required>
-                <input type="text" name = "lirstName" placeholder = "Last Name" required>
+                <input type="text" name = "firstName" placeholder = "First Name" required>
+                <input type="text" name = "lastName" placeholder = "Last Name" required>
                 <input type="text" name = "userName" placeholder = "User Name" required >
                 <input type="email" name = "emailId" placeholder = "Email ID" required>
                 <input type="password" name = "password" placeholder = "Password" required>

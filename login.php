@@ -1,7 +1,21 @@
 <?php
     if (isset($_POST["submitButton"])) {
-        echo "Form  was submitted" ;
+       $firstName = sanitizeFormString($_POST["firstName"]) ;
+       echo $inputName;
     }
+
+    function sanitizeFormString($inputName) {
+        // Remove  html tags from string
+        $inputName = strip_tags($inputName);
+        // Remove spaces from the front and last
+        $inputName = trim($inputName);
+        // Make string lower case
+        $inputName = strtolower($inputName);
+        // Make first Chacter to Captial
+        $inputName = ucfirst($inputName); 
+        return $inputName;
+    }
+
 ?>
 
 
