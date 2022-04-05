@@ -1,21 +1,29 @@
 <?php
+require_once("includes\classes\FromSanitizer.php");
+require_once("includes\config.php");
+require_once("includes\classes\Account.php");
+require_once("includes\classes\Constants.php");
+
+$account = new Account($con) ;
+
     if (isset($_POST["submitButton"])) {
-       $firstName = sanitizeFormString($_POST["firstName"]) ;
-       echo $inputName;
+        $userName  = FromSanitizer:: sanitizeFormUserName($_POST["userName"]);
+        $password  = FromSanitizer::sanitizeFormPassword($_POST["password"]);
+    
+        $sucess = $account->login($userName,$password);
+        if($sucess) {
+            $_SESSION["userLoggedIn"] = $userName ;
+            header("Location: index.php") ;
+        }
     }
 
-    function sanitizeFormString($inputName) {
-        // Remove  html tags from string
-        $inputName = strip_tags($inputName);
-        // Remove spaces from the front and last
-        $inputName = trim($inputName);
-        // Make string lower case
-        $inputName = strtolower($inputName);
-        // Make first Chacter to Captial
-        $inputName = ucfirst($inputName); 
-        return $inputName;
-    }
 
+    function getInputValue($name) { 
+        if(isset($_POST[$name])) {
+            echo $_POST[$name];
+        }
+
+    }
 ?>
 
 
@@ -37,8 +45,8 @@
 </div>
 
             <form  method = "POST" class ="columnForm" >
-                
-                <input type="text" name = "userName" placeholder = "User Name" required >
+                <?php echo $account->getError(Constants::$loginFailed); ?>
+                <input type="text" name = "userName" placeholder = "User Name"  value = "<?php getInputValue("userName");?>" required >
                 <input type="password" name = "password" placeholder = "Password" required>
                 <input type="submit" name = "submitButton" placeholder = "Submit">
                 

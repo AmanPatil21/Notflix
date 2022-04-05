@@ -9,6 +9,12 @@ html , body {
     color: #1d2129;
 }
 
+.wrapper {
+    min-width:1050px;
+    min-height: 100%;
+    background-color: #141414;
+}
+
 .singnIn {
     background-color: #ebe6e6;
     height: 100vh;
@@ -79,3 +85,62 @@ html , body {
     font-size: 15px;
     font-weight: 400;
 }
+
+.errorMessage {
+    color:#f00;
+    font-size: 14px; 
+    font-weight: 400;
+    text-align: center;
+}
+
+
+.previewImage, 
+.previewVideo {
+    width :100%;
+}
+
+.previewContainer {
+    position: relative;
+    display: flex;
+}
+
+.previewOverlay {
+    position: absolute;
+    width: 100%;
+    height:100%;
+    background-color: rgba(0 ,0 ,0 , 0.3);
+}
+.previewOverlay .mainDetails {
+    position: relative;
+    top :35%;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+
+}
+.previewOverlay .mainDetails h3 {
+    color:#fff;
+    font-size: 40px;
+    margin:15px 0;
+}
+.mainDetails button{
+    background-color: rgba(51,51,51,0.6);
+    color: #fff;
+    border: none;
+    padding:0 38px;
+    height:50px;
+    min-width: 150px;
+    max-height: 50px;
+    margin-bottom :15px ;
+    margin-right:5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+button i {
+    color:inherit;
+}
+.mainDetails button:hover{
+    background-color: #e6e6e6;
+    color:#000;
+}
+
