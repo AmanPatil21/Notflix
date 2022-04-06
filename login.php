@@ -38,7 +38,7 @@ $account = new Account($con) ;
         <div class = "singnIn">
         <div class = "columnContainer" >
             <div class ="header">
-                <img  class = "imgContainer" src = "assests\Images\logo1.png" title = "siteLogo" />
+                <img  class = "imgContainer" src = "assests\Images\logo.png" title = "siteLogo" />
                 <h3 > Sign In</h3>
                 <span>To Continue Netflix </span>
 
