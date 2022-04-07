@@ -1,0 +1,28 @@
+1. first start with user name as we need to track up all things user does
+2. so starting with the login page here
+
+3. we are considering php format of webpage as we can use html here with php as special tool whereas in html is limited to html
+4. we are using xampp to and innodb to store our data base
+
+
+5. <!-- logo generator : https://fontmeme.com/netflix-font/ -->
+
+6. $ dollar sign is used for variable in php
+
+7. strip_tags used to remove if html is added is inout
+    //   causes issue sometime
+8. strtolower - make all lower causes
+    ucfirst - mkae first letter capital
+
+9. static : we don't need to create object
+
+10 . ob_start : turns on output buffering
+    waits till all php is executed till output.
+
+11. hashing : hashing convert password of long string
+
+12. Sql query retuen TRUE or FALSE based on execution of the query.
+
+13. header("Location: index.php") : goes to specified page
+
+14. font-awesome icons : color of icon changes according to font color
