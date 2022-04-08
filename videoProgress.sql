@@ -1,0 +1,1 @@
+CREATE TABLE `notflix`.`videoProgress` ( `id` INT NOT NULL AUTO_INCREMENT , `userName` VARCHAR(50) NOT NULL , `videoId` INT NOT NULL , `progress` INT NOT NULL DEFAULT '0' , `finished` TINYINT NOT NULL DEFAULT '0' , `dateModified` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`id`)) ENGINE = InnoDB;
