@@ -16,7 +16,7 @@ if(!isset($_SESSION["userLoggedIn"])) {
 $userLoggedIn = $_SESSION["userLoggedIn"];
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>Welcome to NotFlix</title>
         <link rel="stylesheet" type="text/css" href="assets/style/style.css" />

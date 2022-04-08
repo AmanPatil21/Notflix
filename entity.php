@@ -1,7 +1,7 @@
 <?php
 require_once("includes/header.php");
 
-if(!isset($_GET["id"])) {
+if(!isset($_GET["id"]) || $_GET["id"]=='') {
     ErrorMessage::show("No ID passed into page");
 }
 $entityId = $_GET["id"];
@@ -12,4 +12,7 @@ echo $preview->createPreviewVideo($entity);
 
 $seasonProvider = new SeasonProvider($con, $userLoggedIn);
 echo $seasonProvider->create($entity);
+
+$categoryContainers = new CategoryContainers($con, $userLoggedIn);
+echo $categoryContainers->showCategory($entity->getCategoryId(), "You might also like");
 ?>
