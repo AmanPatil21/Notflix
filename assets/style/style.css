@@ -86,7 +86,7 @@ flex-direction: column;
 }
 
 .signInMessage {
-    font-size: 14px;
+    color: #4285F4;font-size: 14px;
     font-weight: 400;
     text-decoration: none;
 }
@@ -184,9 +184,9 @@ flex-direction: column;
     display: none;
 }
 .entities, .videos {
-    /* -ms-overflow-style: none;   */
+    -ms-overflow-style: none;  
     /* IE and Edge */
-    /* scrollbar-width: none;   */
+    scrollbar-width: none;  
     /* Firefox */
     overflow-x: auto;
     overflow-y : hidden;
@@ -228,6 +228,7 @@ flex-direction: column;
     flex-direction: column;
     width: 230px;
 }
+
 .episodeContainer img {
     width: 230px;
     height: 129px;
@@ -239,4 +240,38 @@ flex-direction: column;
     color: #fff;
     width: 100%;
     white-space: normal;
+}
+
+.episodeContainer .videoInfo {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.previewCategories.noScroll .category .entities {
+    white-space: normal;
+}
+
+.watchContainer video {
+    width: 100%;
+}
+
+.videoControls {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.videoControls h1 {
+    color: #fff;
+}
+
+.videoControls button {
+    font-size: 50px;
+    padding: 50px;
+    color: #fff;
+    background-color: transparent;
+    border: none;
 }

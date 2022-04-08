@@ -26,7 +26,7 @@ function getInputValue($name) {
 }  
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>Welcome to NotFLix</title>
         <link rel="stylesheet" type="text/css" href="assets/style/style.css" />
