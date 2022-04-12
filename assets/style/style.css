@@ -11,6 +11,18 @@ body {
     margin: 0;
 }
 
+h3 {
+    color: #e5e5e5;
+}
+
+a h3:hover {
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
 .wrapper {
     min-width: 1050px;
     min-height: 100%;
@@ -274,4 +286,128 @@ flex-direction: column;
     color: #fff;
     background-color: transparent;
     border: none;
+}
+
+.textBoxContainer {
+    padding: 100px 50px;
+}
+
+.searchInput {
+    height: 50px;
+    width: 600px;
+    border: 1px solid #dedede;
+    background-color: transparent;
+    color: #fff;
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.settingContainer {
+    padding-top: 60px;
+    background-color: transparent;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.settingContainer h2 {
+    color:  #fff;
+}
+
+
+
+.settingContainer.formSection {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    border-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+
+.settingContainer form input[type="text"],
+.settingContainer form input[type="email"],
+.settingContainer form input[type="password"]
+ {
+    width: 300px;
+    height: 40px;
+    font-size: 15px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 3px;
+    padding: 0 5px
+}
+
+
+.settingContainer form input[type="submit"] {
+    background-color: #dc1928;
+    width:100px ;
+    height: 40px;
+}
+
+.alertSuccess ,
+.alertError {
+    margin :10px 0 ;
+}
+
+.alertError {
+    color: #dc1928;
+}
+
+.alertSuccess {
+    color :#2ec771;
+}
+
+
+
+.topBar {
+    position: fixed ;
+    width:100%;
+    min-width: 1050px;
+    z-index: 1;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    height: 70px;
+    padding: 0 60px;
+    transition: background-color 200ms linear;
+}
+
+
+.topBar.scrolled {
+    background-color: #141414;
+    transition: background-color 200ms linear;
+}
+.logoContainer {
+    height: 40px;
+}
+
+.logoContainer img {
+    height: 100%;
+}
+
+.navLinks {
+    display: flex;
+    list-style: none;
+}
+
+.navLinks a {
+    color: #fff;
+    font-size: 14px; 
+    margin-left:20px;
+}
+
+.rightItems {
+    text-align: right;
+    flex: 1;
+   
+}
+
+.rightItems i {
+    font-size: 20px;
+    color:#fff;
+    margin-left: 10px;
+   
 }
